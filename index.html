@@ -49,6 +49,7 @@
             border: 1px solid rgba(226, 232, 240, 0.8);
         }
 
+        /* Estilo para la foto de perfil */
         .profile-img {
             width: 200px;
             height: 200px;
@@ -82,10 +83,10 @@
                         Transformando la presencia digital de Unikitchens en un motor de ventas predecible y escalable en Santiago.
                     </p>
                     <div class="flex items-center gap-6">
-                        <button onclick="goToSlide(2)" class="px-8 py-4 bg-blue-600 text-white rounded-2xl font-bold shadow-lg shadow-blue-200 hover:bg-blue-700 transition-all">Ver Propuesta</button>
-                        <div class="text-sm cursor-pointer" onclick="goToSlide(7)">
+                        <button onclick="nextSlide()" class="px-8 py-4 bg-blue-600 text-white rounded-2xl font-bold shadow-lg shadow-blue-200 hover:bg-blue-700 transition-all">Ver Propuesta</button>
+                        <div class="text-sm">
                             <p class="font-bold">Facundo Schiavi</p>
-                            <p class="text-slate-400 text-xs hover:text-blue-600 transition-colors">Estratega B2B ➔</p>
+                            <p class="text-slate-400 text-xs">Estratega B2B Gastronómico</p>
                         </div>
                     </div>
                 </div>
@@ -112,15 +113,15 @@
                     <div class="space-y-6">
                         <div class="flex items-start gap-4">
                             <div class="mt-1 text-blue-600 font-bold">01.</div>
-                            <p class="text-slate-600"><span class="font-bold text-slate-900">Flujo Predictivo:</span> No depender de la suerte.</p>
+                            <p class="text-slate-600"><span class="font-bold text-slate-900">Flujo Predictivo:</span> No depender de la suerte, sino de datos.</p>
                         </div>
                         <div class="flex items-start gap-4">
                             <div class="mt-1 text-blue-600 font-bold">02.</div>
-                            <p class="text-slate-600"><span class="font-bold text-slate-900">Eficiencia en Ventas:</span> Leads pre-calificados.</p>
+                            <p class="text-slate-600"><span class="font-bold text-slate-900">Eficiencia en Ventas:</span> Leads pre-calificados listos para visitar cocinas.</p>
                         </div>
                         <div class="flex items-start gap-4">
                             <div class="mt-1 text-blue-600 font-bold">03.</div>
-                            <p class="text-slate-600"><span class="font-bold text-slate-900">Cierre de Stock:</span> Capacidad de escalado inmediato.</p>
+                            <p class="text-slate-600"><span class="font-bold text-slate-900">Cierre de Stock:</span> Capacidad de "abrir la llave" según disponibilidad.</p>
                         </div>
                     </div>
                 </div>
@@ -129,30 +130,34 @@
 
         <section id="slide-3" class="slide-container">
             <h2 class="text-4xl font-extrabold mb-4">Éxito del Piloto Validado</h2>
-            <p class="text-slate-500 mb-12 italic">"Los datos no mienten: el mercado busca Dark Kitchens."</p>
+            <p class="text-slate-500 mb-12 italic">"Los datos no mienten: el mercado está buscando activamente Dark Kitchens."</p>
             <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
                 <div class="bg-white p-6 rounded-3xl shadow-sm border border-slate-100 text-center">
-                    <p class="text-xs font-bold text-slate-400 mb-2 uppercase italic">Inversión</p>
+                    <p class="text-xs font-bold text-slate-400 uppercase tracking-tighter mb-2">Inversión</p>
                     <p class="text-3xl font-extrabold">$28.907</p>
+                    <p class="text-[10px] text-blue-600 font-bold">CLP TOTAL</p>
                 </div>
                 <div class="bg-white p-6 rounded-3xl shadow-sm border border-slate-100 text-center">
-                    <p class="text-xs font-bold text-slate-400 mb-2 uppercase italic">Leads</p>
+                    <p class="text-xs font-bold text-slate-400 uppercase tracking-tighter mb-2">Leads</p>
                     <p class="text-3xl font-extrabold text-blue-600">65</p>
+                    <p class="text-[10px] text-slate-400 font-bold">CONVERSACIONES</p>
                 </div>
                 <div class="bg-white p-6 rounded-3xl shadow-sm border border-slate-100 text-center">
-                    <p class="text-xs font-bold text-slate-400 mb-2 uppercase italic">Costo Lead</p>
-                    <p class="text-3xl font-extrabold text-green-600">$445</p>
+                    <p class="text-xs font-bold text-slate-400 uppercase tracking-tighter mb-2">Costo Lead</p>
+                    <p class="text-3xl font-extrabold">$445</p>
+                    <p class="text-[10px] text-green-600 font-bold">CLP POR CHAT</p>
                 </div>
                 <div class="bg-white p-6 rounded-3xl shadow-sm border border-slate-100 text-center">
-                    <p class="text-xs font-bold text-slate-400 mb-2 uppercase italic">Cierres</p>
-                    <p class="text-3xl font-extrabold">1</p>
+                    <p class="text-xs font-bold text-slate-400 uppercase tracking-tighter mb-2">Cierres</p>
+                    <p class="text-3xl font-extrabold text-slate-900">1</p>
+                    <p class="text-[10px] text-slate-400 font-bold">CLIENTE FIRMADO</p>
                 </div>
             </div>
             <div class="bg-slate-900 rounded-[2.5rem] p-10 text-white flex flex-col md:flex-row items-center justify-between gap-8">
                 <div class="md:w-1/2">
-                    <h3 class="text-2xl font-bold mb-4 italic text-blue-400">CAC Validado</h3>
-                    <p class="text-slate-400">
-                        La inversión inicial generó un retorno directo masivo. El sistema está listo para ser escalado profesionalmente.
+                    <h3 class="text-2xl font-bold mb-4">CAC Validado</h3>
+                    <p class="text-slate-400 leading-relaxed">
+                        Con una inversión mínima ($28k), logramos un cierre cuyo valor de contrato (LTV) supera con creces el costo de adquisición. El canal es altamente rentable.
                     </p>
                 </div>
                 <div class="chart-container">
@@ -162,7 +167,7 @@
         </section>
 
         <section id="slide-4" class="slide-container">
-            <h2 class="text-4xl font-extrabold mb-12 text-center">Escalabilidad Mensual</h2>
+            <h2 class="text-4xl font-extrabold mb-12 text-center">Escalabilidad (Plan $100k)</h2>
             <div class="grid md:grid-cols-2 gap-12 items-center">
                 <div class="space-y-8">
                     <div class="flex gap-6 items-center">
@@ -172,34 +177,67 @@
                             <p class="text-3xl font-black">75 – 110 Chats</p>
                         </div>
                     </div>
+                    <div class="flex gap-6 items-center">
+                        <div class="w-16 h-16 bg-blue-100 rounded-2xl flex items-center justify-center text-2xl">💰</div>
+                        <div>
+                            <p class="text-slate-400 text-sm font-bold uppercase">CPL Estimado</p>
+                            <p class="text-3xl font-black">$900 – $1.300 <span class="text-lg font-normal">CLP</span></p>
+                        </div>
+                    </div>
                     <div class="p-6 bg-blue-600 text-white rounded-3xl shadow-xl">
-                        <h4 class="font-bold mb-2 uppercase text-xs">Retorno Esperado</h4>
-                        <p class="text-3xl font-black">1 a 2 <span class="text-lg font-normal">Contratos/Mes</span></p>
+                        <h4 class="font-bold mb-2">Retorno Esperado</h4>
+                        <p class="text-3xl font-black">1 a 2 <span class="text-lg font-normal">Cocinas Arrendadas/Mes</span></p>
                     </div>
                 </div>
                 <div class="glass-card p-8 rounded-[2.5rem]">
-                    <h3 class="font-bold text-xl mb-6 italic">¿Cómo crecemos?</h3>
-                    <ul class="space-y-4">
-                        <li class="flex gap-4 text-sm text-slate-600">✅ <span class="font-bold text-slate-900">A/B Testing de Anuncios</span></li>
-                        <li class="flex gap-4 text-sm text-slate-600">✅ <span class="font-bold text-slate-900">Lookalike Audiences</span></li>
-                        <li class="flex gap-4 text-sm text-slate-600">✅ <span class="font-bold text-slate-900">Optimización de Funnel</span></li>
-                    </ul>
+                    <h3 class="font-bold text-xl mb-6">¿Cómo escalamos?</h3>
+                    <ol class="space-y-6">
+                        <li class="flex gap-4">
+                            <span class="w-6 h-6 rounded-full bg-slate-900 text-white text-[10px] flex items-center justify-center shrink-0 mt-1">1</span>
+                            <p class="text-sm text-slate-600"><span class="font-bold text-slate-900">A/B Testing:</span> Probamos múltiples creativos para encontrar el anuncio ganador.</p>
+                        </li>
+                        <li class="flex gap-4">
+                            <span class="w-6 h-6 rounded-full bg-slate-900 text-white text-[10px] flex items-center justify-center shrink-0 mt-1">2</span>
+                            <p class="text-sm text-slate-600"><span class="font-bold text-slate-900">Lookalike Audiences:</span> Buscamos perfiles similares a los clientes actuales de Unikitchens.</p>
+                        </li>
+                        <li class="flex gap-4">
+                            <span class="w-6 h-6 rounded-full bg-slate-900 text-white text-[10px] flex items-center justify-center shrink-0 mt-1">3</span>
+                            <p class="text-sm text-slate-600"><span class="font-bold text-slate-900">Sales Enablement:</span> Perfeccionamos el guion de WhatsApp para cerrar más rápido.</p>
+                        </li>
+                    </ol>
                 </div>
             </div>
         </section>
 
         <section id="slide-5" class="slide-container">
-            <h2 class="text-4xl font-extrabold mb-12 text-center italic">Elige tu Estrategia</h2>
+            <h2 class="text-4xl font-extrabold mb-12 text-center">Nuestros Planes</h2>
             <div class="grid md:grid-cols-2 gap-8">
                 <div class="bg-white p-10 rounded-[2.5rem] border border-slate-100 flex flex-col">
                     <h3 class="text-2xl font-bold mb-2">Plan Lead Gen</h3>
-                    <div class="text-4xl font-black mb-8">$350.000 <span class="text-sm text-slate-400 font-normal">+ IVA</span></div>
-                    <button onclick="goToSlide(7)" class="w-full py-4 border-2 border-slate-900 rounded-2xl font-bold hover:bg-slate-900 hover:text-white transition-all">Seleccionar Plan</button>
+                    <p class="text-slate-400 text-sm mb-6 uppercase font-bold tracking-widest italic">Mantenimiento de flujo</p>
+                    <div class="text-4xl font-black mb-8">$350.000 <span class="text-sm text-slate-400 font-normal">+ IVA / mes</span></div>
+                    <ul class="space-y-4 mb-10 flex-grow text-slate-600">
+                        <li class="flex items-center gap-3">✅ Gestión de 1 campaña activa</li>
+                        <li class="flex items-center gap-3">✅ Optimización mensual</li>
+                        <li class="flex items-center gap-3">✅ Reporte de resultados</li>
+                        <li class="flex items-center gap-3 text-slate-300">❌ Test A/B de creativos</li>
+                        <li class="flex items-center gap-3 text-slate-300">❌ Guion de WhatsApp</li>
+                    </ul>
+                    <button onclick="currentSlideIdx=7; updateSlide();" class="w-full py-4 border-2 border-slate-900 rounded-2xl font-bold hover:bg-slate-900 hover:text-white transition-all">Seleccionar Plan</button>
                 </div>
                 <div class="bg-slate-900 p-10 rounded-[2.5rem] text-white flex flex-col relative overflow-hidden">
-                    <h3 class="text-2xl font-bold mb-2 text-blue-400 italic">Plan Performance</h3>
-                    <div class="text-4xl font-black mb-8 text-blue-400">$500.000 <span class="text-sm text-slate-500 font-normal">+ IVA</span></div>
-                    <button onclick="goToSlide(7)" class="w-full py-4 bg-blue-600 rounded-2xl font-bold shadow-xl shadow-blue-900 hover:bg-blue-500 transition-all">Seleccionar Performance</button>
+                    <div class="absolute top-8 right-8 bg-blue-600 text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase italic">Performance</div>
+                    <h3 class="text-2xl font-bold mb-2 text-blue-400">Plan Performance</h3>
+                    <p class="text-slate-400 text-sm mb-6 uppercase font-bold tracking-widest italic italic">Crecimiento y Escala</p>
+                    <div class="text-4xl font-black mb-8 text-blue-400">$500.000 <span class="text-sm text-slate-500 font-normal">+ IVA / mes</span></div>
+                    <ul class="space-y-4 mb-10 flex-grow">
+                        <li class="flex items-center gap-3">✅ <span class="font-bold">Todo lo del plan anterior</span></li>
+                        <li class="flex items-center gap-3">✅ Test A/B (Hasta 2 creativos)</li>
+                        <li class="flex items-center gap-3">✅ Optimización quincenal</li>
+                        <li class="flex items-center gap-3 text-blue-400">✅ <span class="font-bold">Guion de Venta WhatsApp</span></li>
+                        <li class="flex items-center gap-3">✅ Inteligencia de Mercado</li>
+                    </ul>
+                    <button onclick="currentSlideIdx=7; updateSlide();" class="w-full py-4 bg-blue-600 rounded-2xl font-bold shadow-xl shadow-blue-900 hover:bg-blue-500 transition-all">Seleccionar Performance</button>
                 </div>
             </div>
         </section>
@@ -208,9 +246,12 @@
             <div class="text-center pt-20">
                 <h1 class="text-6xl font-black mb-8">¿Empezamos el <span class="text-blue-600 italic">Lunes?</span></h1>
                 <p class="text-xl text-slate-500 mb-12 max-w-2xl mx-auto">
-                    El sistema está validado. Solo falta darle "ON" para asegurar la ocupación total de Unikitchens.
+                    Ya validamos el canal. Ahora es momento de profesionalizar la gestión para asegurar que cada peso invertido se traduzca en una cocina produciendo ingresos.
                 </p>
-                <button onclick="goToSlide(7)" class="px-12 py-5 bg-slate-900 text-white rounded-3xl font-bold text-xl shadow-2xl hover:scale-105 transition-all">Sí, quiero comenzar</button>
+                <div class="flex flex-col md:flex-row justify-center items-center gap-6">
+                    <button onclick="nextSlide()" class="px-12 py-5 bg-slate-900 text-white rounded-3xl font-bold text-xl shadow-2xl hover:scale-105 transition-all">Ver contacto y perfil</button>
+                    <p class="text-slate-400 font-semibold italic">Santiago, Chile 🇨🇱</p>
+                </div>
             </div>
         </section>
 
@@ -225,24 +266,36 @@
                 </div>
 
                 <div class="md:w-2/3">
-                    <span class="text-blue-600 font-bold uppercase tracking-widest text-sm italic mb-2 block">Estratega de Crecimiento</span>
+                    <span class="text-blue-600 font-bold uppercase tracking-widest text-sm italic mb-2 block">Estratega a cargo</span>
                     <h2 class="text-5xl font-black mb-6">Facundo Schiavi</h2>
                     
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
                         <div class="glass-card p-4 rounded-2xl">
-                            <p class="text-blue-600 font-bold text-sm mb-1">🎯 Performance Gastronómica</p>
-                            <p class="text-slate-600 text-sm italic">Experto en conectar marcas con emprendedores de cocina.</p>
+                            <p class="text-blue-600 font-bold text-sm mb-1">🎯 Performance</p>
+                            <p class="text-slate-600 text-sm">Foco 100% en retorno de inversión y adquisición de leads B2B.</p>
                         </div>
                         <div class="glass-card p-4 rounded-2xl">
-                            <p class="text-blue-600 font-bold text-sm mb-1">📊 Métricas Reales</p>
-                            <p class="text-slate-600 text-sm italic">Optimización diaria basada en costo por conversación.</p>
+                            <p class="text-blue-600 font-bold text-sm mb-1">🍳 Especialidad</p>
+                            <p class="text-slate-600 text-sm">Experiencia conectando infraestructura gastronómica con el mercado.</p>
+                        </div>
+                        <div class="glass-card p-4 rounded-2xl">
+                            <p class="text-blue-600 font-bold text-sm mb-1">📊 Data-Driven</p>
+                            <p class="text-slate-600 text-sm">Decisiones basadas en métricas reales de conversión y costo.</p>
+                        </div>
+                        <div class="glass-card p-4 rounded-2xl">
+                            <p class="text-blue-600 font-bold text-sm mb-1">🚀 Escalamiento</p>
+                            <p class="text-slate-600 text-sm">Sistemas preparados para crecer según la demanda de stock.</p>
                         </div>
                     </div>
 
                     <div class="flex flex-col sm:flex-row items-center gap-6">
                         <a href="https://wa.me/5492644747199?text=Hola%20Facundo,%20quiero%20confirmar%20la%20propuesta%20de%20Unikitchens%20para%20comenzar%20el%20lunes." target="_blank" class="w-full sm:w-auto text-center px-10 py-5 bg-green-500 text-white rounded-2xl font-black text-xl shadow-xl shadow-green-200 hover:bg-green-600 hover:-translate-y-1 transition-all">
-                            CONFIRMAR POR WHATSAPP 🚀
+                            CONFIRMAR PROPUESTA 🚀
                         </a>
+                        <div class="text-left">
+                            <p class="text-slate-400 text-xs font-bold uppercase">Disponibilidad</p>
+                            <p class="text-slate-900 font-bold text-sm italic">Inmediata (Lunes)</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -253,51 +306,67 @@
     <footer class="fixed bottom-0 left-0 w-full p-6 flex justify-between items-center bg-white/80 backdrop-blur-md z-50">
         <div class="flex gap-2" id="nav-dots"></div>
         <div class="flex gap-4">
-            <button onclick="prevSlide()" id="prevBtn" class="p-4 rounded-2xl border border-slate-200"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg></button>
-            <button onclick="nextSlide()" id="nextBtn" class="p-4 rounded-2xl bg-slate-900 text-white shadow-lg"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg></button>
+            <button onclick="prevSlide()" id="prevBtn" class="p-4 rounded-2xl border border-slate-200">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+            </button>
+            <button onclick="nextSlide()" id="nextBtn" class="p-4 rounded-2xl bg-slate-900 text-white shadow-lg">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+            </button>
         </div>
     </footer>
 
     <script>
         let currentSlideIdx = 1;
-        const totalSlides = 7;
+        const totalSlides = 7; // ACTUALIZADO A 7
 
         function updateSlide() {
             document.querySelectorAll('.slide-container').forEach(s => s.classList.remove('active'));
-            document.getElementById(`slide-${currentSlideIdx}`).classList.add('active');
+            const currentSlide = document.getElementById(`slide-${currentSlideIdx}`);
+            if(currentSlide) currentSlide.classList.add('active');
+
             document.getElementById('slide-counter').innerText = `${String(currentSlideIdx).padStart(2, '0')} / ${String(totalSlides).padStart(2, '0')}`;
-            
+
             const prevBtn = document.getElementById('prevBtn');
             const nextBtn = document.getElementById('nextBtn');
+            
             prevBtn.style.opacity = currentSlideIdx === 1 ? '0.3' : '1';
+            prevBtn.style.cursor = currentSlideIdx === 1 ? 'not-allowed' : 'pointer';
+            
             nextBtn.style.opacity = currentSlideIdx === totalSlides ? '0.3' : '1';
+            nextBtn.style.cursor = currentSlideIdx === totalSlides ? 'not-allowed' : 'pointer';
 
             updateDots();
             if (currentSlideIdx === 3) renderPilotoChart();
         }
 
-        // Nueva función para navegar a una diapositiva específica
-        function goToSlide(n) {
-            currentSlideIdx = n;
-            updateSlide();
-            window.scrollTo({ top: 0, behavior: 'smooth' });
+        function nextSlide() {
+            if (currentSlideIdx < totalSlides) {
+                currentSlideIdx++;
+                updateSlide();
+            }
         }
 
-        function nextSlide() { if (currentSlideIdx < totalSlides) { currentSlideIdx++; updateSlide(); } }
-        function prevSlide() { if (currentSlideIdx > 1) { currentSlideIdx--; updateSlide(); } }
+        function prevSlide() {
+            if (currentSlideIdx > 1) {
+                currentSlideIdx--;
+                updateSlide();
+            }
+        }
 
         function createDots() {
             const container = document.getElementById('nav-dots');
+            container.innerHTML = '';
             for (let i = 1; i <= totalSlides; i++) {
                 const dot = document.createElement('div');
-                dot.className = `nav-dot h-2 w-2 rounded-full bg-slate-200 transition-all cursor-pointer`;
-                dot.onclick = () => goToSlide(i);
+                dot.className = `nav-dot h-2 w-2 rounded-full bg-slate-200 transition-all cursor-pointer ${i === 1 ? 'active' : ''}`;
+                dot.onclick = () => { currentSlideIdx = i; updateSlide(); };
                 container.appendChild(dot);
             }
         }
 
         function updateDots() {
-            document.querySelectorAll('.nav-dot').forEach((dot, idx) => {
+            const dots = document.querySelectorAll('.nav-dot');
+            dots.forEach((dot, idx) => {
                 dot.classList.toggle('active', (idx + 1) === currentSlideIdx);
             });
         }
@@ -308,11 +377,13 @@
             if(!canvas) return;
             const ctx = canvas.getContext('2d');
             if (chartInstance) chartInstance.destroy();
+
             chartInstance = new Chart(ctx, {
                 type: 'bar',
                 data: {
-                    labels: ['Costo Adq.', 'Valor Contrato'],
+                    labels: ['Inversión', 'Retorno Est.'],
                     datasets: [{
+                        label: 'CLP',
                         data: [28907, 1200000],
                         backgroundColor: ['#ffffff', '#3b82f6'],
                         borderRadius: 12
@@ -321,7 +392,10 @@
                 options: {
                     maintainAspectRatio: false,
                     plugins: { legend: { display: false } },
-                    scales: { y: { display: false }, x: { grid: { display: false }, ticks: { color: '#94a3b8' } } }
+                    scales: {
+                        y: { display: false },
+                        x: { ticks: { color: '#94a3b8' }, grid: { display: false } }
+                    }
                 }
             });
         }
