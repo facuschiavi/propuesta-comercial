@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Propuesta Estratégica Unikitchens</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
@@ -17,7 +17,9 @@
 
         .slide-container {
             display: none;
-            min-height: calc(100vh - 160px);
+            min-height: 100vh;
+            /* CAMBIO CLAVE: Espacio extra abajo para que la barra no tape nada */
+            padding-bottom: 160px; 
         }
 
         .slide-container.active {
@@ -35,7 +37,7 @@
             width: 100%;
             max-width: 500px;
             margin: auto;
-            height: 300px;
+            height: 250px;
         }
 
         .nav-dot.active {
@@ -49,10 +51,9 @@
             border: 1px solid rgba(226, 232, 240, 0.8);
         }
 
-        /* Estilo para la foto de perfil */
         .profile-img {
-            width: 200px;
-            height: 200px;
+            width: 180px;
+            height: 180px;
             object-fit: cover;
             border-radius: 3rem;
             border: 4px solid white;
@@ -65,179 +66,146 @@
     <header class="p-6 flex justify-between items-center max-w-7xl mx-auto w-full">
         <div class="flex items-center gap-2">
             <div class="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center text-white font-bold">U</div>
-            <span class="font-extrabold text-xl tracking-tight">UNIKITCHENS <span class="text-blue-600">ADS</span></span>
+            <span class="font-extrabold text-xl tracking-tight uppercase">UNIKITCHENS <span class="text-blue-600">ADS</span></span>
         </div>
         <div id="slide-counter" class="text-sm font-semibold text-slate-400">01 / 07</div>
     </header>
 
-    <main class="max-w-6xl mx-auto px-6 py-8">
+    <main class="max-w-6xl mx-auto px-6">
         
         <section id="slide-1" class="slide-container active">
-            <div class="flex flex-col md:flex-row items-center gap-12 pt-12">
-                <div class="md:w-3/5">
-                    <span class="inline-block px-4 py-1.5 bg-blue-100 text-blue-700 rounded-full text-xs font-bold uppercase tracking-widest mb-6">Propuesta Comercial 2026</span>
-                    <h1 class="text-5xl md:text-7xl font-extrabold leading-tight mb-8">
+            <div class="flex flex-col md:flex-row items-center gap-8 md:gap-12 pt-4 md:pt-12">
+                <div class="w-full md:w-3/5">
+                    <span class="inline-block px-4 py-1.5 bg-blue-100 text-blue-700 rounded-full text-[10px] font-bold uppercase tracking-widest mb-6">Propuesta Comercial 2026</span>
+                    <h1 class="text-4xl md:text-7xl font-extrabold leading-tight mb-6">
                         Generación de leads para <span class="text-blue-600 italic">arriendo de cocinas.</span>
                     </h1>
-                    <p class="text-xl text-slate-500 mb-10 leading-relaxed max-w-xl">
+                    <p class="text-lg text-slate-500 mb-8 leading-relaxed max-w-xl">
                         Transformando la presencia digital de Unikitchens en un motor de ventas predecible y escalable en Santiago.
                     </p>
                     <div class="flex items-center gap-6">
                         <button onclick="nextSlide()" class="px-8 py-4 bg-blue-600 text-white rounded-2xl font-bold shadow-lg shadow-blue-200 hover:bg-blue-700 transition-all">Ver Propuesta</button>
                         <div class="text-sm">
                             <p class="font-bold">Facundo Schiavi</p>
-                            <p class="text-slate-400 text-xs">Estratega B2B Gastronómico</p>
+                            <p class="text-slate-400 text-xs uppercase font-semibold">Estratega B2B</p>
                         </div>
                     </div>
                 </div>
-                <div class="md:w-2/5 grid grid-cols-2 gap-4">
-                    <div class="h-40 bg-slate-200 rounded-3xl animate-pulse"></div>
-                    <div class="h-40 bg-blue-600 rounded-3xl flex items-center justify-center text-white text-4xl">🍳</div>
-                    <div class="h-40 bg-slate-900 rounded-3xl flex items-center justify-center text-white text-4xl">📱</div>
-                    <div class="h-40 bg-slate-100 rounded-3xl"></div>
+                <div class="w-full md:w-2/5 grid grid-cols-2 gap-4">
+                    <div class="aspect-square bg-slate-200 rounded-3xl animate-pulse"></div>
+                    <div class="aspect-square bg-blue-600 rounded-3xl flex items-center justify-center text-white text-4xl shadow-xl shadow-blue-100">🍳</div>
+                    <div class="aspect-square bg-slate-900 rounded-3xl flex items-center justify-center text-white text-4xl shadow-xl shadow-slate-200">📱</div>
+                    <div class="aspect-square bg-slate-100 rounded-3xl border border-slate-200"></div>
                 </div>
             </div>
         </section>
 
         <section id="slide-2" class="slide-container">
-            <div class="max-w-4xl">
-                <h2 class="text-4xl font-extrabold mb-12">El Desafío Estratégico</h2>
-                <div class="grid md:grid-cols-2 gap-8">
-                    <div class="glass-card p-8 rounded-3xl">
-                        <div class="w-12 h-12 bg-blue-100 rounded-2xl flex items-center justify-center text-2xl mb-6">🎯</div>
-                        <h3 class="text-xl font-bold mb-4">Meta Principal</h3>
-                        <p class="text-slate-500 leading-relaxed">
-                            Generar conversaciones calificadas con emprendedores gastronómicos en Santiago, optimizando el costo por lead (CPL) para maximizar la ocupación.
-                        </p>
+            <h2 class="text-3xl md:text-4xl font-extrabold mb-10">El Desafío Estratégico</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="glass-card p-8 rounded-3xl">
+                    <div class="w-12 h-12 bg-blue-100 rounded-2xl flex items-center justify-center text-2xl mb-6">🎯</div>
+                    <h3 class="text-xl font-bold mb-4">Meta Principal</h3>
+                    <p class="text-slate-500 leading-relaxed text-sm md:text-base">
+                        Generar conversaciones calificadas con emprendedores gastronómicos en Santiago, optimizando el costo por lead (CPL).
+                    </p>
+                </div>
+                <div class="space-y-6">
+                    <div class="flex items-start gap-4 p-4 bg-white rounded-2xl shadow-sm border border-slate-50">
+                        <div class="text-blue-600 font-bold">01.</div>
+                        <p class="text-sm text-slate-600"><span class="font-bold text-slate-900">Flujo Predictivo:</span> No depender de la suerte.</p>
                     </div>
-                    <div class="space-y-6">
-                        <div class="flex items-start gap-4">
-                            <div class="mt-1 text-blue-600 font-bold">01.</div>
-                            <p class="text-slate-600"><span class="font-bold text-slate-900">Flujo Predictivo:</span> No depender de la suerte, sino de datos.</p>
-                        </div>
-                        <div class="flex items-start gap-4">
-                            <div class="mt-1 text-blue-600 font-bold">02.</div>
-                            <p class="text-slate-600"><span class="font-bold text-slate-900">Eficiencia en Ventas:</span> Leads pre-calificados listos para visitar cocinas.</p>
-                        </div>
-                        <div class="flex items-start gap-4">
-                            <div class="mt-1 text-blue-600 font-bold">03.</div>
-                            <p class="text-slate-600"><span class="font-bold text-slate-900">Cierre de Stock:</span> Capacidad de "abrir la llave" según disponibilidad.</p>
-                        </div>
+                    <div class="flex items-start gap-4 p-4 bg-white rounded-2xl shadow-sm border border-slate-50">
+                        <div class="text-blue-600 font-bold">02.</div>
+                        <p class="text-sm text-slate-600"><span class="font-bold text-slate-900">Eficiencia:</span> Leads listos para visitar cocinas.</p>
+                    </div>
+                    <div class="flex items-start gap-4 p-4 bg-white rounded-2xl shadow-sm border border-slate-50">
+                        <div class="text-blue-600 font-bold">03.</div>
+                        <p class="text-sm text-slate-600"><span class="font-bold text-slate-900">Cierre de Stock:</span> Control total de la demanda.</p>
                     </div>
                 </div>
             </div>
         </section>
 
         <section id="slide-3" class="slide-container">
-            <h2 class="text-4xl font-extrabold mb-4">Éxito del Piloto Validado</h2>
-            <p class="text-slate-500 mb-12 italic">"Los datos no mienten: el mercado está buscando activamente Dark Kitchens."</p>
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
-                <div class="bg-white p-6 rounded-3xl shadow-sm border border-slate-100 text-center">
-                    <p class="text-xs font-bold text-slate-400 uppercase tracking-tighter mb-2">Inversión</p>
-                    <p class="text-3xl font-extrabold">$28.907</p>
-                    <p class="text-[10px] text-blue-600 font-bold">CLP TOTAL</p>
+            <h2 class="text-3xl md:text-4xl font-extrabold mb-6">Éxito Validado</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+                <div class="bg-white p-5 rounded-3xl border border-slate-100 text-center">
+                    <p class="text-[10px] font-bold text-slate-400 uppercase mb-1">Inversión</p>
+                    <p class="text-2xl font-black">$28.907</p>
                 </div>
-                <div class="bg-white p-6 rounded-3xl shadow-sm border border-slate-100 text-center">
-                    <p class="text-xs font-bold text-slate-400 uppercase tracking-tighter mb-2">Leads</p>
-                    <p class="text-3xl font-extrabold text-blue-600">65</p>
-                    <p class="text-[10px] text-slate-400 font-bold">CONVERSACIONES</p>
+                <div class="bg-white p-5 rounded-3xl border border-slate-100 text-center">
+                    <p class="text-[10px] font-bold text-slate-400 uppercase mb-1">Leads</p>
+                    <p class="text-2xl font-black text-blue-600">65</p>
                 </div>
-                <div class="bg-white p-6 rounded-3xl shadow-sm border border-slate-100 text-center">
-                    <p class="text-xs font-bold text-slate-400 uppercase tracking-tighter mb-2">Costo Lead</p>
-                    <p class="text-3xl font-extrabold">$445</p>
-                    <p class="text-[10px] text-green-600 font-bold">CLP POR CHAT</p>
+                <div class="bg-white p-5 rounded-3xl border border-slate-100 text-center">
+                    <p class="text-[10px] font-bold text-slate-400 uppercase mb-1">Costo Lead</p>
+                    <p class="text-2xl font-black text-green-600">$445</p>
                 </div>
-                <div class="bg-white p-6 rounded-3xl shadow-sm border border-slate-100 text-center">
-                    <p class="text-xs font-bold text-slate-400 uppercase tracking-tighter mb-2">Cierres</p>
-                    <p class="text-3xl font-extrabold text-slate-900">1</p>
-                    <p class="text-[10px] text-slate-400 font-bold">CLIENTE FIRMADO</p>
+                <div class="bg-white p-5 rounded-3xl border border-slate-100 text-center">
+                    <p class="text-[10px] font-bold text-slate-400 uppercase mb-1">Cierres</p>
+                    <p class="text-2xl font-black text-slate-900">1</p>
                 </div>
             </div>
-            <div class="bg-slate-900 rounded-[2.5rem] p-10 text-white flex flex-col md:flex-row items-center justify-between gap-8">
-                <div class="md:w-1/2">
-                    <h3 class="text-2xl font-bold mb-4">CAC Validado</h3>
-                    <p class="text-slate-400 leading-relaxed">
-                        Con una inversión mínima ($28k), logramos un cierre cuyo valor de contrato (LTV) supera con creces el costo de adquisición. El canal es altamente rentable.
-                    </p>
+            <div class="bg-slate-900 rounded-[2.5rem] p-8 text-white flex flex-col md:flex-row items-center gap-8">
+                <div class="w-full md:w-1/2">
+                    <h3 class="text-xl font-bold mb-4 text-blue-400">CAC Ganador</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">El canal es altamente rentable: inversión mínima con retorno real.</p>
                 </div>
-                <div class="chart-container">
-                    <canvas id="pilotoChart"></canvas>
-                </div>
+                <div class="chart-container"><canvas id="pilotoChart"></canvas></div>
             </div>
         </section>
 
         <section id="slide-4" class="slide-container">
-            <h2 class="text-4xl font-extrabold mb-12 text-center">Escalabilidad (Plan $100k de inversión)</h2>
-            <div class="grid md:grid-cols-2 gap-12 items-center">
-                <div class="space-y-8">
-                    <div class="flex gap-6 items-center">
-                        <div class="w-16 h-16 bg-blue-100 rounded-2xl flex items-center justify-center text-2xl">📈</div>
+            <h2 class="text-3xl md:text-4xl font-extrabold mb-10 text-center">Escalabilidad</h2>
+            <div class="grid md:grid-cols-2 gap-8 items-center">
+                <div class="space-y-6">
+                    <div class="flex gap-4 items-center bg-white p-6 rounded-2xl border border-slate-100">
+                        <div class="text-2xl">📈</div>
                         <div>
-                            <p class="text-slate-400 text-sm font-bold uppercase">Volumen Mensual</p>
-                            <p class="text-3xl font-black">75 – 110 Chats</p>
+                            <p class="text-[10px] font-bold text-slate-400 uppercase">Volumen</p>
+                            <p class="text-2xl font-black">75 – 110 Chats</p>
                         </div>
                     </div>
-                    <div class="flex gap-6 items-center">
-                        <div class="w-16 h-16 bg-blue-100 rounded-2xl flex items-center justify-center text-2xl">💰</div>
-                        <div>
-                            <p class="text-slate-400 text-sm font-bold uppercase">CPL Estimado</p>
-                            <p class="text-3xl font-black">$900 – $1.300 <span class="text-lg font-normal">CLP</span></p>
-                        </div>
-                    </div>
-                    <div class="p-6 bg-blue-600 text-white rounded-3xl shadow-xl">
-                        <h4 class="font-bold mb-2">Retorno Esperado</h4>
-                        <p class="text-3xl font-black">1 a 2 <span class="text-lg font-normal">Cocinas Arrendadas/Mes</span></p>
+                    <div class="p-6 bg-blue-600 text-white rounded-3xl">
+                        <h4 class="font-bold text-xs uppercase opacity-80 mb-1">Retorno Esperado</h4>
+                        <p class="text-2xl font-black">1 a 2 Cocinas / Mes</p>
                     </div>
                 </div>
-                <div class="glass-card p-8 rounded-[2.5rem]">
-                    <h3 class="font-bold text-xl mb-6">¿Cómo escalamos?</h3>
-                    <ol class="space-y-6">
-                        <li class="flex gap-4">
-                            <span class="w-6 h-6 rounded-full bg-slate-900 text-white text-[10px] flex items-center justify-center shrink-0 mt-1">1</span>
-                            <p class="text-sm text-slate-600"><span class="font-bold text-slate-900">A/B Testing:</span> Probamos múltiples creativos para encontrar el anuncio ganador.</p>
-                        </li>
-                        <li class="flex gap-4">
-                            <span class="w-6 h-6 rounded-full bg-slate-900 text-white text-[10px] flex items-center justify-center shrink-0 mt-1">2</span>
-                            <p class="text-sm text-slate-600"><span class="font-bold text-slate-900">Lookalike Audiences:</span> Buscamos perfiles similares a los clientes actuales de Unikitchens.</p>
-                        </li>
-                        <li class="flex gap-4">
-                            <span class="w-6 h-6 rounded-full bg-slate-900 text-white text-[10px] flex items-center justify-center shrink-0 mt-1">3</span>
-                            <p class="text-sm text-slate-600"><span class="font-bold text-slate-900">Sales Enablement:</span> Perfeccionamos el guion de WhatsApp para cerrar más rápido.</p>
-                        </li>
-                    </ol>
+                <div class="glass-card p-6 rounded-[2rem]">
+                    <h3 class="font-bold mb-4">Estrategia de Escala</h3>
+                    <ul class="text-sm space-y-4 text-slate-600">
+                        <li>🎯 <b>A/B Testing:</b> Creativos ganadores.</li>
+                        <li>👥 <b>Lookalike:</b> Audiencias similares.</li>
+                        <li>💬 <b>Sales:</b> Guion de WhatsApp.</li>
+                    </ul>
                 </div>
             </div>
         </section>
 
         <section id="slide-5" class="slide-container">
-            <h2 class="text-4xl font-extrabold mb-12 text-center">Nuestros Planes</h2>
-            <div class="grid md:grid-cols-2 gap-8">
-                <div class="bg-white p-10 rounded-[2.5rem] border border-slate-100 flex flex-col">
-                    <h3 class="text-2xl font-bold mb-2">Plan Lead Gen</h3>
-                    <p class="text-slate-400 text-sm mb-6 uppercase font-bold tracking-widest italic">Mantenimiento de flujo</p>
-                    <div class="text-4xl font-black mb-8">$350.000 <span class="text-sm text-slate-400 font-normal"></span></div>
-                    <ul class="space-y-4 mb-10 flex-grow text-slate-600">
-                        <li class="flex items-center gap-3">✅ Gestión de 1 campaña activa</li>
-                        <li class="flex items-center gap-3">✅ Optimización mensual</li>
-                        <li class="flex items-center gap-3">✅ Reporte de resultados</li>
-                        <li class="flex items-center gap-3 text-slate-300">❌ Test A/B de creativos</li>
-                        <li class="flex items-center gap-3 text-slate-300">❌ Guion de WhatsApp</li>
+            <h2 class="text-3xl md:text-4xl font-extrabold mb-10 text-center">Nuestros Planes</h2>
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="bg-white p-8 rounded-[2.5rem] border border-slate-100 flex flex-col">
+                    <h3 class="text-xl font-bold mb-1">Lead Gen</h3>
+                    <div class="text-3xl font-black mb-6">$350.000</div>
+                    <ul class="space-y-3 mb-8 text-sm text-slate-600 flex-grow">
+                        <li>✅ Gestión de campaña</li>
+                        <li>✅ Optimización mensual</li>
+                        <li class="opacity-30">❌ Guion de WhatsApp</li>
                     </ul>
-                    <button onclick="currentSlideIdx=7; updateSlide();" class="w-full py-4 border-2 border-slate-900 rounded-2xl font-bold hover:bg-slate-900 hover:text-white transition-all">Seleccionar Plan</button>
+                    <button onclick="currentSlideIdx=7; updateSlide();" class="w-full py-4 border-2 border-slate-900 rounded-xl font-bold">Seleccionar</button>
                 </div>
-                <div class="bg-slate-900 p-10 rounded-[2.5rem] text-white flex flex-col relative overflow-hidden">
-                    <div class="absolute top-8 right-8 bg-blue-600 text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase italic">Performance</div>
-                    <h3 class="text-2xl font-bold mb-2 text-blue-400">Plan Performance</h3>
-                    <p class="text-slate-400 text-sm mb-6 uppercase font-bold tracking-widest italic italic">Crecimiento y Escala</p>
-                    <div class="text-4xl font-black mb-8 text-blue-400">$500.000 <span class="text-sm text-slate-500 font-normal"></span></div>
-                    <ul class="space-y-4 mb-10 flex-grow">
-                        <li class="flex items-center gap-3">✅ <span class="font-bold">Todo lo del plan anterior</span></li>
-                        <li class="flex items-center gap-3">✅ Test A/B (Hasta 2 creativos)</li>
-                        <li class="flex items-center gap-3">✅ Optimización quincenal</li>
-                        <li class="flex items-center gap-3 text-blue-400">✅ <span class="font-bold">Guion de Venta WhatsApp</span></li>
-                        <li class="flex items-center gap-3">✅ Inteligencia de Mercado</li>
+                <div class="bg-slate-900 p-8 rounded-[2.5rem] text-white flex flex-col relative overflow-hidden">
+                    <div class="absolute top-6 right-6 bg-blue-600 text-[8px] font-bold px-2 py-1 rounded-full uppercase italic">Top</div>
+                    <h3 class="text-xl font-bold mb-1 text-blue-400">Performance</h3>
+                    <div class="text-3xl font-black mb-6 text-blue-400">$500.000</div>
+                    <ul class="space-y-3 mb-8 text-sm flex-grow">
+                        <li>✅ Test A/B Creativos</li>
+                        <li class="text-blue-400 font-bold">✅ Guion Venta WhatsApp</li>
+                        <li>✅ Inteligencia de Mercado</li>
                     </ul>
-                    <button onclick="currentSlideIdx=7; updateSlide();" class="w-full py-4 bg-blue-600 rounded-2xl font-bold shadow-xl shadow-blue-900 hover:bg-blue-500 transition-all">Seleccionar Performance</button>
+                    <button onclick="currentSlideIdx=7; updateSlide();" class="w-full py-4 bg-blue-600 rounded-xl font-bold">Escalar Ahora</button>
                 </div>
             </div>
         </section>
@@ -249,130 +217,84 @@
                     Ya validamos el canal. Ahora es momento de profesionalizar la gestión para asegurar que cada peso invertido se traduzca en una cocina produciendo ingresos.
                 </p>
                 <div class="flex flex-col md:flex-row justify-center items-center gap-6">
-    <button onclick="nextSlide()" class="px-12 py-5 bg-slate-900 text-white rounded-3xl font-bold text-xl shadow-2xl hover:scale-105 transition-all">
-        Ver contacto y perfil
-    </button>
+                    <button onclick="nextSlide()" class="px-12 py-5 bg-slate-900 text-white rounded-3xl font-bold text-xl shadow-2xl hover:scale-105 transition-all">
+                        Ver contacto y perfil
+                    </button>
 
-    <div class="flex flex-col text-center md:text-left">
-        <p class="text-slate-400 font-semibold italic">Santiago, Chile 🇨🇱</p>
-        <p class="text-slate-400 font-semibold italic">San Juan, Argentina 🇦🇷</p>
-    </div>
-</div>
+                    <div class="flex flex-col text-center md:text-left">
+                        <p class="text-slate-400 font-semibold italic">Santiago, Chile 🇨🇱</p>
+                        <p class="text-slate-400 font-semibold italic">San Juan, Argentina 🇦🇷</p>
+                    </div>
+                </div>
             </div>
         </section>
 
         <section id="slide-7" class="slide-container">
-            <div class="flex flex-col md:flex-row items-center gap-12 pt-6">
-                <div class="md:w-1/3 flex flex-col items-center">
-                    <img src="https://i.ibb.co/hJqkbthq/DSC08591.jpg" alt="Facundo Schiavi" class="profile-img bg-slate-200 mb-6">
-                    <a href="https://www.linkedin.com/in/facu-schiavi/" target="_blank" class="flex items-center gap-2 text-blue-600 font-bold hover:underline">
-                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
-                        LinkedIn Profesional
-                    </a>
+            <div class="flex flex-col md:flex-row items-center gap-10 pt-6">
+                <div class="w-full md:w-1/3 flex flex-col items-center text-center">
+                    <img src="https://i.ibb.co/hJqkbthq/DSC08591.jpg" class="profile-img mb-6">
+                    <h2 class="text-4xl font-black">Facundo Schiavi</h2>
+                    <p class="text-blue-600 font-bold text-xs uppercase tracking-widest mt-2">Estratega B2B Gastronómico</p>
                 </div>
-
-                <div class="md:w-2/3">
-                    <span class="text-blue-600 font-bold uppercase tracking-widest text-sm italic mb-2 block">Estratega a cargo</span>
-                    <h2 class="text-5xl font-black mb-6">Facundo Schiavi</h2>
-                    
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
-                        <div class="glass-card p-4 rounded-2xl">
-                            <p class="text-blue-600 font-bold text-sm mb-1">🎯 Performance</p>
-                            <p class="text-slate-600 text-sm">Foco 100% en retorno de inversión y adquisición de leads B2B.</p>
-                        </div>
-                        <div class="glass-card p-4 rounded-2xl">
-                            <p class="text-blue-600 font-bold text-sm mb-1">🍳 Especialidad</p>
-                            <p class="text-slate-600 text-sm">Founder Popapp. Operador de Dark Kitchens.</p>
-                        </div>
-                        <div class="glass-card p-4 rounded-2xl">
-                            <p class="text-blue-600 font-bold text-sm mb-1">📊 Data-Driven</p>
-                            <p class="text-slate-600 text-sm">Decisiones basadas en métricas reales de conversión y costo.</p>
-                        </div>
-                        <div class="glass-card p-4 rounded-2xl">
-                            <p class="text-blue-600 font-bold text-sm mb-1">🚀 Escalamiento</p>
-                            <p class="text-slate-600 text-sm">Especialista en escalar negocios foodtech.</p>
-                        </div>
+                <div class="w-full md:w-2/3">
+                    <div class="grid grid-cols-2 gap-4 mb-8">
+                        <div class="glass-card p-4 rounded-xl text-xs font-bold">🎯 Performance</div>
+                        <div class="glass-card p-4 rounded-xl text-xs font-bold">🍳 Especialidad Dark Kitchen</div>
+                        <div class="glass-card p-4 rounded-xl text-xs font-bold">📊 Data-Driven</div>
+                        <div class="glass-card p-4 rounded-xl text-xs font-bold">🚀 Escalamiento</div>
                     </div>
-
-                    <div class="flex flex-col sm:flex-row items-center gap-6">
-                        <a href="https://wa.me/5492644747199?text=Hola%20Facundo,%20quiero%20confirmar%20la%20propuesta%20de%20Unikitchens%20para%20comenzar%20el%20lunes." target="_blank" class="w-full sm:w-auto text-center px-10 py-5 bg-green-500 text-white rounded-2xl font-black text-xl shadow-xl shadow-green-200 hover:bg-green-600 hover:-translate-y-1 transition-all">
-                            CONFIRMAR PROPUESTA 🚀
-                        </a>
-                        <div class="text-left">
-                            <p class="text-slate-400 text-xs font-bold uppercase">Disponibilidad</p>
-                            <p class="text-slate-900 font-bold text-sm italic">Marzo 2026</p>
-                        </div>
-                    </div>
+                    <a href="https://wa.me/5492644747199?text=Hola%20Facundo,%20confirmamos%20Unikitchens!" target="_blank" class="block w-full text-center py-5 bg-green-500 text-white rounded-2xl font-black text-xl shadow-xl shadow-green-100 hover:-translate-y-1 transition-all">
+                        CONFIRMAR 🚀
+                    </a>
                 </div>
             </div>
         </section>
 
     </main>
 
-    <footer class="fixed bottom-0 left-0 w-full p-6 flex justify-between items-center bg-white/80 backdrop-blur-md z-50">
+    <footer class="fixed bottom-0 left-0 w-full p-6 flex justify-between items-center bg-white/90 backdrop-blur-md border-t border-slate-100 z-50">
         <div class="flex gap-2" id="nav-dots"></div>
         <div class="flex gap-4">
-            <button onclick="prevSlide()" id="prevBtn" class="p-4 rounded-2xl border border-slate-200">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+            <button onclick="prevSlide()" id="prevBtn" class="p-4 rounded-2xl border border-slate-200 bg-white">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
             </button>
             <button onclick="nextSlide()" id="nextBtn" class="p-4 rounded-2xl bg-slate-900 text-white shadow-lg">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
             </button>
         </div>
     </footer>
 
     <script>
         let currentSlideIdx = 1;
-        const totalSlides = 7; // ACTUALIZADO A 7
+        const totalSlides = 7;
 
         function updateSlide() {
             document.querySelectorAll('.slide-container').forEach(s => s.classList.remove('active'));
             const currentSlide = document.getElementById(`slide-${currentSlideIdx}`);
             if(currentSlide) currentSlide.classList.add('active');
-
+            
             document.getElementById('slide-counter').innerText = `${String(currentSlideIdx).padStart(2, '0')} / ${String(totalSlides).padStart(2, '0')}`;
-
-            const prevBtn = document.getElementById('prevBtn');
-            const nextBtn = document.getElementById('nextBtn');
-            
-            prevBtn.style.opacity = currentSlideIdx === 1 ? '0.3' : '1';
-            prevBtn.style.cursor = currentSlideIdx === 1 ? 'not-allowed' : 'pointer';
-            
-            nextBtn.style.opacity = currentSlideIdx === totalSlides ? '0.3' : '1';
-            nextBtn.style.cursor = currentSlideIdx === totalSlides ? 'not-allowed' : 'pointer';
-
+            window.scrollTo(0,0);
             updateDots();
             if (currentSlideIdx === 3) renderPilotoChart();
         }
 
-        function nextSlide() {
-            if (currentSlideIdx < totalSlides) {
-                currentSlideIdx++;
-                updateSlide();
-            }
-        }
-
-        function prevSlide() {
-            if (currentSlideIdx > 1) {
-                currentSlideIdx--;
-                updateSlide();
-            }
-        }
+        function nextSlide() { if (currentSlideIdx < totalSlides) { currentSlideIdx++; updateSlide(); } }
+        function prevSlide() { if (currentSlideIdx > 1) { currentSlideIdx--; updateSlide(); } }
 
         function createDots() {
             const container = document.getElementById('nav-dots');
             container.innerHTML = '';
             for (let i = 1; i <= totalSlides; i++) {
                 const dot = document.createElement('div');
-                dot.className = `nav-dot h-2 w-2 rounded-full bg-slate-200 transition-all cursor-pointer ${i === 1 ? 'active' : ''}`;
+                dot.className = `nav-dot h-2 w-2 rounded-full bg-slate-200 transition-all cursor-pointer`;
                 dot.onclick = () => { currentSlideIdx = i; updateSlide(); };
                 container.appendChild(dot);
             }
         }
 
         function updateDots() {
-            const dots = document.querySelectorAll('.nav-dot');
-            dots.forEach((dot, idx) => {
+            document.querySelectorAll('.nav-dot').forEach((dot, idx) => {
                 dot.classList.toggle('active', (idx + 1) === currentSlideIdx);
             });
         }
@@ -383,13 +305,11 @@
             if(!canvas) return;
             const ctx = canvas.getContext('2d');
             if (chartInstance) chartInstance.destroy();
-
             chartInstance = new Chart(ctx, {
                 type: 'bar',
                 data: {
                     labels: ['Inversión', 'Retorno Est.'],
                     datasets: [{
-                        label: 'CLP',
                         data: [28907, 1200000],
                         backgroundColor: ['#ffffff', '#3b82f6'],
                         borderRadius: 12
@@ -398,18 +318,10 @@
                 options: {
                     maintainAspectRatio: false,
                     plugins: { legend: { display: false } },
-                    scales: {
-                        y: { display: false },
-                        x: { ticks: { color: '#94a3b8' }, grid: { display: false } }
-                    }
+                    scales: { y: { display: false }, x: { ticks: { color: '#94a3b8', font: { size: 10 } }, grid: { display: false } } }
                 }
             });
         }
-
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'ArrowRight' || e.key === ' ') nextSlide();
-            if (e.key === 'ArrowLeft') prevSlide();
-        });
 
         createDots();
         updateSlide();
